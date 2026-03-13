@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CANO Cleaning Services LLC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f3f4f6;
+      color: #111827;
+      text-align: center;
+    }
+
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    .header-container {
+      max-width: 1250px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      text-align: left;
+      flex-wrap: wrap;
+    }
+
+    .brand img {
+      width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .brand-text h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      line-height: 1.1;
+    }
+
+    .brand-text p {
+      margin: 6px 0 0;
+      font-size: 1rem;
+    }
+
+    .call-top {
+      display: inline-block;
+      background: white;
+      color: #1e3a8a;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .hero {
+      background: url("images/cleaning.png") center center / cover no-repeat;
+      padding: 140px 20px;
+      position: relative;
+    }
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.50);
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 50px 30px;
+      border-radius: 14px;
+      color: white;
+    }
+
+    .hero h2 {
+      margin: 0 0 15px;
+      font-size: 2.8rem;
+    }
+
+    .hero h3 {
+      margin: 0 0 15px;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      margin: 0 0 30px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .btn-call {
+      display: inline-block;
+      background: #1e3a8a;
+      color: white;
+      padding: 16px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #4b5563;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .services {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 22px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .work-section {
+      background: #ffffff;
+    }
+
+    .gallery {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item h4 {
+      margin: 0;
+      padding: 16px;
+      font-size: 1.1rem;
+    }
+
+    .before-after {
+      background: #f9fafb;
+    }
+
+    .ba-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .ba-card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .ba-card h3 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 1.4rem;
+    }
+
+    .ba-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .ba-box {
+      background: #f3f4f6;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+
+    .ba-box img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ba-label {
+      padding: 10px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      background: #eef2ff;
+      color: #1e3a8a;
+    }
+
+    .areas {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .area-pill {
+      background: white;
+      padding: 14px 22px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+      font-weight: bold;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 35px 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .contact-box p {
+      font-size: 1.1rem;
+      margin: 12px 0;
+    }
+
+    .contact-box a {
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      padding: 28px 20px;
+      margin-top: 0;
+    }
+
+    .floating-call {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #1e3a8a;
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        justify-content: center;
+      }
+
+      .brand {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand-text {
+        text-align: center;
+      }
+
+      .brand img {
+        width: 140px;
+      }
+
+      .brand-text h1 {
+        font-size: 1.7rem;
+      }
+
+      .hero {
+        padding: 90px 15px;
+      }
+
+      .hero-overlay {
+        padding: 35px 20px;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero h3 {
+        font-size: 1.3rem;
+      }
+
+      .ba-images {
+        grid-template-columns: 1fr;
+      }
+
+      .ba-box img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <img src="cano_logo_transparent.png" alt="CANO Cleaning Services LLC Logo">
+        <div class="brand-text">
+          <h1>CANO Cleaning Services LLC</h1>
+          <p>Carpet Cleaning • Tile &amp; Grout Cleaning • Bulk Trash Removal • Power Washing</p>
+        </div>
+      </div>
+
+      <a class="call-top" href="tel:3017920729">📞 Call Now</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h2>Professional Carpet Cleaning</h2>
+      <h3>CANO Cleaning Services LLC</h3>
+      <p>
+        Serving Maryland, Virginia, and Washington DC with reliable carpet cleaning,
+        tile &amp; grout cleaning, bulk trash removal, and power washing services.
+      </p>
+      <a class="btn-call" href="tel:3017920729">📞 Call Now: 301-792-0729</a>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">
+      Professional cleaning and exterior services for homes, apartments, offices, and commercial properties.
+    </p>
+
+    <div class="services">
+      <div class="card">
+        <h3>Carpet Cleaning</h3>
+        <p>Deep cleaning to remove stains, dirt, odors, and allergens from carpets.</p>
+      </div>
+
+      <div class="card">
+        <h3>Tile &amp; Grout Cleaning</h3>
+        <p>Professional cleaning to restore tile floors and grout lines.</p>
+      </div>
+
+      <div class="card">
+        <h3>Bulk Trash Removal</h3>
+        <p>Removal of furniture, junk, and unwanted large items from properties.</p>
+      </div>
+
+      <div class="card">
+        <h3>Power Washing</h3>
+        <p>Exterior cleaning for sidewalks, patios, driveways, buildings, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="work-section">
+    <h2 class="section-title">Our Work</h2>
+    <p class="section-subtitle">
+      Add photos of your real jobs below to show customers the quality of your work.
+    </p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/carpet.jpg" alt="Carpet Cleaning Work">
+        <h4>Carpet Cleaning</h4>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/tile.jpg" alt="Tile and Grout Cleaning Work">
+        <h4>Tile &amp; Grout Cleaning</h4>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/powerwash.jpg" alt="Power Washing Work">
+        <h4>Power Washing</h4>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/trash.jpg" alt="Bulk Trash Removal Work">
+        <h4>Bulk Trash Removal</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="before-after">
+    <h2 class="section-title">Before / After</h2>
+    <p class="section-subtitle">
+      Replace these images with your real before-and-after photos to show the results of your work.
+    </p>
+
+    <div class="ba-grid">
+      <div class="ba-card">
+        <h3>Carpet Cleaning</h3>
+        <div class="ba-images">
+          <div class="ba-box">
+            <div class="ba-label">Before</div>
+            <img src="images/carpet-before.jpg" alt="Carpet Before Cleaning">
+          </div>
+          <div class="ba-box">
+            <div class="ba-label">After</div>
+            <img src="images/carpet-after.jpg" alt="Carpet After Cleaning">
+          </div>
+        </div>
+      </div>
+
+      <div class="ba-card">
+        <h3>Tile &amp; Grout Cleaning</h3>
+        <div class="ba-images">
+          <div class="ba-box">
+            <div class="ba-label">Before</div>
+            <img src="images/tile-before.jpg" alt="Tile Before Cleaning">
+          </div>
+          <div class="ba-box">
+            <div class="ba-label">After</div>
+            <img src="images/tile-after.jpg" alt="Tile After Cleaning">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Service Areas</h2>
+    <p class="section-subtitle">
+      We proudly serve residential and commercial customers in these areas.
+    </p>
+
+    <div class="areas">
+      <div class="area-pill">Maryland</div>
+      <div class="area-pill">Virginia</div>
+      <div class="area-pill">Washington DC</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-box">
+      <p><strong>Phone:</strong> <a href="tel:3017920729">301-792-0729</a></p>
+      <p><strong>Email:</strong> <a href="mailto:Peter1-999@hotmail.com">Peter1-999@hotmail.com</a></p>
+      <p><strong>Business:</strong> CANO Cleaning Services LLC</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 CANO Cleaning Services LLC. All rights reserved.
+  </footer>
+
+  <a class="floating-call" href="tel:3017920729">📞 Call</a>
+
+</body>
+</html>
